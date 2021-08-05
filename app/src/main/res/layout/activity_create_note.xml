@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CreateNote">
+
+    <EditText
+        android:id="@+id/editHeader"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/note_item_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Başlık"
+        android:inputType="textPersonName"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BCBCBC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:maxLength="50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editContent"
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/note_item_bg"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Notunuzu Giriniz"
+        android:inputType="textMultiLine"
+        android:maxLength="5000"
+        android:paddingTop="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BCBCBC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+ />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editContent"
+        android:background="@drawable/circle_bg"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/editContent" >
+    <ImageButton
+        android:id="@+id/saveNoteBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/create_note_save_btn"
+        />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
